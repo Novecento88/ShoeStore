@@ -13,13 +13,15 @@
             android:id="@+id/scrollView2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".fragments.ShoesListFragment">
+            tools:context=".fragments.ShoesListFragment"
+            >
 
             <LinearLayout
                 android:id="@+id/shoes_list_linear_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                >
 
             </LinearLayout>
 

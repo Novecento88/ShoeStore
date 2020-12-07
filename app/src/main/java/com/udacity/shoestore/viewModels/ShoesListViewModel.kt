@@ -23,14 +23,14 @@ class ShoesListViewModel(): ViewModel() {
         )
 
         val shoe2 = Shoe(
-            "primo",
+            "secondo",
             2.0,
             "Nike",
             "test"
         )
 
         val shoe3 = Shoe(
-            "primo",
+            "terzo",
             2.0,
             "Adidas",
             "test"

@@ -2,21 +2,22 @@ package com.udacity.shoestore.fragments
 
 import android.os.Bundle
 import android.view.*
-import androidx.fragment.app.Fragment
+import android.widget.LinearLayout
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoesListBinding
 import com.udacity.shoestore.databinding.ShoeItemLayoutBinding
-import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.viewModels.ShoesListViewModel
 
 class ShoesListFragment : Fragment() {
 
-    private lateinit var viewModel: ShoesListViewModel
+    private val viewModel: ShoesListViewModel by activityViewModels()
+
+    private lateinit var binding: FragmentShoesListBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,15 +28,14 @@ class ShoesListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = DataBindingUtil.inflate<FragmentShoesListBinding>(inflater, R.layout.fragment_shoes_list, container, false)
 
-        viewModel = ViewModelProvider(this).get(ShoesListViewModel::class.java)
+        binding = DataBindingUtil.inflate<FragmentShoesListBinding>(inflater, R.layout.fragment_shoes_list, container, false)
 
         viewModel.shoesList.observe(viewLifecycleOwner, Observer { shoesList ->
            for(shoe in shoesList){
                val shoeBinding = ShoeItemLayoutBinding.inflate(inflater)
                shoeBinding.shoe = shoe
-               binding.shoesListLinearLayout.addView(shoeBinding.root)
+               addItem(shoeBinding.root)
            }
         })
 
@@ -62,6 +62,12 @@ class ShoesListFragment : Fragment() {
 
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun addItem(view: View){
+        val layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+        layoutParams.setMargins(16, 8, 16, 8)
+        binding.shoesListLinearLayout.addView(view, layoutParams)
     }
 
 }

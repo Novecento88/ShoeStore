@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
@@ -17,7 +18,7 @@ class ShoeDetailFragment : Fragment() {
 
     private lateinit var binding: FragmentShoeDeteailBinding
 
-    private lateinit var viewModel: ShoesListViewModel
+    private val viewModel: ShoesListViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +32,7 @@ class ShoeDetailFragment : Fragment() {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_deteail, container, false)
 
-        viewModel = ViewModelProvider(this).get(ShoesListViewModel::class.java)
+        //viewModel = ViewModelProvider(this).get(ShoesListViewModel::class.java)
 
         binding.shoeViewModel = viewModel
         binding.lifecycleOwner = this
