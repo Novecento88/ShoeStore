@@ -57,6 +57,7 @@ class ShoesListFragment : Fragment() {
         return when(item.itemId){
             R.id.actionLogout -> {
                 findNavController().navigate(ShoesListFragmentDirections.actionShoesListFragmentToLoginFragment2())
+                viewModel.logOut()
                 true
             }
 

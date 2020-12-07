@@ -8,6 +8,8 @@
             type="com.udacity.shoestore.models.Shoe" />
     </data>
 
+    <!-- I just wanted to show a series of elements in vertical order, so I chose LinearLayout for its simplicity -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,21 +35,21 @@
             style="@style/shoe_attribute"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/company_text" />
+            android:text="@={shoe.company}" />
 
         <TextView
             android:id="@+id/sizeTextView"
             style="@style/shoe_attribute"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/shoe_size_text" />
+            android:text="@={shoe.size}" />
 
         <TextView
             android:id="@+id/descriptionTextView"
             style="@style/shoe_attribute"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/description_text" />
+            android:text="@={shoe.description}" />
 
     </LinearLayout>
 

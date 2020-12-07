@@ -28,7 +28,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -45,10 +45,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:autofillHints=""
+                android:contentDescription="@string/shoe_name_hint"
                 android:ems="10"
-                android:hint="@string/shoe_name_hint"
                 android:inputType="text"
-                android:text="@={shoeData.name}"/>
+                android:labelFor="@id/shoeNameTextView"
+                android:text="@={shoeData.name}" />
 
         </LinearLayout>
 
@@ -59,7 +60,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
@@ -77,9 +78,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:autofillHints=""
+                android:contentDescription="@string/company_hint"
                 android:ems="10"
-                android:hint="@string/company_hint"
                 android:inputType="text"
+                android:labelFor="@id/companyNameTextView"
                 android:text="@={shoeData.company}" />
 
         </LinearLayout>
@@ -91,7 +93,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout">
@@ -108,10 +110,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                android:autofillHints=""
+                android:contentDescription="@string/shoe_size_hint"
                 android:ems="10"
                 android:inputType="numberDecimal"
-                android:text='@={shoeData.size}'
-                android:autofillHints="" />
+                android:labelFor="@id/shoeSizeTextView"
+                android:text='@={shoeData.size}' />
 
         </LinearLayout>
 
@@ -122,7 +126,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
@@ -140,9 +144,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:autofillHints=""
+                android:contentDescription="@string/description_hint"
                 android:ems="10"
-                android:hint="@string/description_hint"
                 android:inputType="text"
+                android:labelFor="@id/shoeDescriptionTextView"
                 android:text="@={shoeData.description}" />
 
         </LinearLayout>

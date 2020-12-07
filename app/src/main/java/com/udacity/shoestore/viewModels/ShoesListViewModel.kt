@@ -14,6 +14,33 @@ class ShoesListViewModel(): ViewModel() {
 
     init {
         Timber.i("ShoeViewModel created!")
+
+        //Just a test. If you uncomment the next line, be sure to comment the last one in this block.
+        //addDummyItems()
+
+        _shoesList.value = mutableListOf()
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        Timber.i("ShoesListViewmodel destroyed!")
+    }
+
+    fun addNewPairOfShoes(shoeName: String, shoeSize: String, companyName: String, description: String){
+        val newShoe = Shoe(
+                shoeName,
+                shoeSize.toDouble(),
+                companyName,
+                description
+        )
+        _shoesList.value?.add(newShoe)
+    }
+
+    fun logOut(){
+        _shoesList.value = mutableListOf()
+    }
+
+    private fun addDummyItems(){
         val dummyList : MutableList<Shoe> = mutableListOf()
         val shoe1 = Shoe(
             "primo",
@@ -41,24 +68,5 @@ class ShoesListViewModel(): ViewModel() {
         dummyList.add(shoe1)
 
         _shoesList.value = dummyList
-    }
-
-    override fun onCleared() {
-        super.onCleared()
-        Timber.i("ShoesListViewmodel destroyed!")
-    }
-
-    fun addNewPairOfShoes(shoeName: String, shoeSize: String, companyName: String, description: String){
-        val newShoe = Shoe(
-                shoeName,
-                shoeSize.toDouble(),
-                companyName,
-                description
-        )
-        _shoesList.value?.add(newShoe)
-    }
-
-    companion object {
-
     }
 }
