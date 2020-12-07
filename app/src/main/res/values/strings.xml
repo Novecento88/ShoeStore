@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button_text">LOGIN</string>
+    <string name="register_button_text">REGISTER</string>
+
+    <string name="shoe_store_title">SHOE STORE</string>
+    <string name="welcome_payoff">The one and only!</string>
+    <string name="next_button_description">Next button</string>
+    <string name="instructions_title_text">HOW IT WORKS</string>
+    <string name="instructions_text">With this amazing app you can create your own inventory of all your shoes so that the next time you can chose from the comfort of your sofa.</string>
+    <string name="enter_button_text">ENTER</string>
+    <string name="fab_description">Add a new pair of shoes.</string>
+    <string name="logout_menu_action">Logout</string>
+    <string name="shoe_name_text">Shoe Name</string>
+    <string name="company_text">Company</string>
+    <string name="shoe_size_text">Shoe Size</string>
+    <string name="description_text">Description</string>
+    <string name="shoe_name_hint">Shoes name</string>
+    <string name="company_hint">Company name</string>
+    <string name="shoe_size_hint">Your size</string>
+    <string name="description_hint">A brief description</string>
+    <string name="cancel_button_text">CANCEL</string>
+    <string name="save_button_text">SAVE</string>
+    <string name="empty_fields_toast">All fields must be filled!</string>
+
+</resources>
