@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(toolbar)
 
-        val appBarConfiguration = AppBarConfiguration(navController.graph)
+        val appBarConfiguration = AppBarConfiguration.Builder(R.id.loginFragment2, R.id.shoesListFragment).build()
         NavigationUI.setupWithNavController(toolbar, navController, appBarConfiguration)
 
     }
