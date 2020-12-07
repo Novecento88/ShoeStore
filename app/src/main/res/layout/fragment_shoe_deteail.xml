@@ -5,6 +5,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- For this Layout I chose a combination of both ConstraintLayout and Linear Layout, because I needed to arrange all the elements
+     just as I wanted, but I also liked the "modularity" offered by the LinearLayout to arrange the TextViews with the EditTexts -->
+
     <data>
         <variable
             name="shoeViewModel"
